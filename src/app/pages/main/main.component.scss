@@ -1,0 +1,19 @@
+.branding {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 20px;
+  padding-left: 16px;
+}
+
+.header {
+  height: 48px;
+  background-color: #161923;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header__text {
+  font-weight: 100;
+  color: var(--bg);
+  text-decoration: none;
+}
