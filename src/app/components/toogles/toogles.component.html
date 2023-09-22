@@ -2,15 +2,13 @@
   <div class="toogles">
     <div class="title">API Set:</div>
     <ul>
-      <li>all</li>
-      <li>server</li>
-      <li>client</li>
+      <li>{{ selectlang.all }}</li>
+      <li>{{ selectlang.server }}</li>
+      <li>{{ selectlang.client }}</li>
     </ul>
-    <div class="toogles"></div>
-    <div class="toogles"></div>
   </div>
   <div class="toogles">
-    <div class="title">Language:</div>
+    <div class="title">{{ selectlang.language }}</div>
     <ul>
       <li>raw</li>
       <li>lua</li>
@@ -19,19 +17,19 @@
     </ul>
   </div>
   <div class="toogles">
-    <div class="title">Color Theme:</div>
+    <div class="title">{{ selectlang.theame }}</div>
     <ul>
-      <li>Dark</li>
-      <li>White</li>
-      <li>Blue</li>
-      <li>Red</li>
+      <li>{{ selectlang.dark }}</li>
+      <li>{{ selectlang.white }}</li>
+      <li>{{ selectlang.blue }}</li>
+      <li>{{ selectlang.red }}</li>
     </ul>
   </div>
   <div class="toogles">
-    <div class="title">Language</div>
+    <div class="title">{{ selectlang.language }}</div>
     <ul>
-      <li>Ru</li>
-      <li>En</li>
+      <li (click)="switchRu()">Ru</li>
+      <li (click)="switchEng()">En</li>
     </ul>
   </div>
 </nav>
