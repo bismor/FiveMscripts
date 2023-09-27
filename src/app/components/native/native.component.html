@@ -1,5 +1,9 @@
 <ul class="native">
-  <li class="native__name" *ngFor="let native of natives; trackBy: trackByFn">
+  <li
+    [class.selected]="native === selectedNative"
+    *ngFor="let native of natives; trackBy: trackByFn"
+    (click)="onSelect(native)"
+  >
     {{ native.name }}
     <span class="native__arg">
       (

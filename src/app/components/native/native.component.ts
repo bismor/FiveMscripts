@@ -14,4 +14,10 @@ export class NativeComponent {
     console.log(native.hash);
     return native.hash;
   }
+
+  selectedNative!: Native;
+
+  onSelect(native: Native): void {
+    this.selectedNative = native;
+  }
 }

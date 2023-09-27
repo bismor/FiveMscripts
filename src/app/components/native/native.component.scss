@@ -2,7 +2,7 @@
   padding: 0;
 }
 
-.native__name {
+.native li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,4 +19,12 @@
   font-weight: 400;
   white-space: nowrap;
   opacity: 0.75;
+}
+
+.native li.selected {
+  background: #f40552;
+}
+
+.native li:hover {
+  background: pink;
 }
