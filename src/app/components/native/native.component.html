@@ -1,10 +1,7 @@
-<ul>
-  <li
-    class="native__argument"
-    *ngFor="let native of natives; trackBy: trackByFn"
-  >
+<ul class="native">
+  <li class="native__name" *ngFor="let native of natives; trackBy: trackByFn">
     {{ native.name }}
-    <span>
+    <span class="native__arg">
       (
       <span *ngFor="let argument of native.arguments">
         {{ argument.namearg }} -- [[ {{ argument.type }} ]]

@@ -1,4 +1,22 @@
-.native__argument {
+.native {
+  padding: 0;
+}
+
+.native__name {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding: 4px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+  box-shadow: none;
+}
+
+.native__arg {
+  font-size: 0.8rem;
+  padding-left: 4px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0.75;
 }
