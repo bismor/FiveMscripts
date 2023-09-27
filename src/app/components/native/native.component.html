@@ -1,1 +1,12 @@
-<p>native works!</p>
+<ul>
+  <li class="native__argument" *ngFor="let native of natives">
+    {{ native.name }}
+    <span>
+      "("
+      <p *ngFor="let native of natives">
+        {{ native.arguments[0].namearg | json }}
+      </p>
+      ")"
+    </span>
+  </li>
+</ul>

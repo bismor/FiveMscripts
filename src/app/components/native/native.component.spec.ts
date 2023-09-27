@@ -8,7 +8,7 @@ describe('NativeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NativeComponent]
+      declarations: [NativeComponent],
     });
     fixture = TestBed.createComponent(NativeComponent);
     component = fixture.componentInstance;
