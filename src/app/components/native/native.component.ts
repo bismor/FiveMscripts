@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Native } from '../native';
+import { Native, Argument } from '../native';
 import { NATIVELISTLUA } from '../../native-list';
 
 @Component({
@@ -9,4 +9,9 @@ import { NATIVELISTLUA } from '../../native-list';
 })
 export class NativeComponent {
   natives = NATIVELISTLUA;
+
+  trackByFn(index: number, native: Native) {
+    console.log(native.hash);
+    return native.hash;
+  }
 }

@@ -1,12 +1,15 @@
 <ul>
-  <li class="native__argument" *ngFor="let native of natives">
+  <li
+    class="native__argument"
+    *ngFor="let native of natives; trackBy: trackByFn"
+  >
     {{ native.name }}
     <span>
-      "("
-      <p *ngFor="let native of natives">
-        {{ native.arguments[0].namearg | json }}
-      </p>
-      ")"
+      (
+      <span *ngFor="let argument of native.arguments">
+        {{ argument.namearg }} -- [[ {{ argument.type }} ]]
+      </span>
+      )
     </span>
   </li>
 </ul>
