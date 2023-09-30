@@ -1,4 +1,4 @@
-<div class="detail">
+<div *ngIf="native" class="detail">
   <div class="info">
     <span class="namespace">
       <span>Namespace: </span>
@@ -16,7 +16,7 @@
   <h2>AddAudioSubmixOutput</h2>
   <div class="hash">
     <span>
-      <pre>0xAC6E290D</pre>
+      <pre>{{ native.hash }}</pre>
     </span>
   </div>
   <div class="code">
@@ -48,3 +48,4 @@
     <p>Adds an output for the specified audio submix.</p>
   </div>
 </div>
+<ng-template #elseBlock>Please select a native from the list.</ng-template>
