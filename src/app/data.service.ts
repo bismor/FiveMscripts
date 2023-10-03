@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
-
+import { Native } from './components/native';
+import { NATIVELISTLUA } from './native-list';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
+  constructor() {}
 
-  constructor() { }
+  getNatives(): Native[] {
+    return NATIVELISTLUA;
+  }
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Native, Argument } from '../native';
+import { Native } from '../native';
 import { NATIVELISTLUA } from '../../native-list';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-native',
@@ -8,7 +9,17 @@ import { NATIVELISTLUA } from '../../native-list';
   styleUrls: ['./native.component.scss'],
 })
 export class NativeComponent {
-  natives = NATIVELISTLUA;
+  natives: Native[] = [];
+
+  constructor(private dataService: DataService) {}
+
+  getNatives(): void {
+    this.natives = this.dataService.getNatives();
+  }
+
+  ngOnInit(): void {
+    this.getNatives();
+  }
 
   trackByFn(index: number, native: Native) {
     console.log(native.hash);
