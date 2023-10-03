@@ -14,7 +14,6 @@ import { NativeModule } from 'src/app/components/native/native.module';
     RouterModule.forChild([{ path: '', component: MainComponent }]),
     InputModule,
     TooglesModule,
-    DetailsModule,
     NativeModule,
   ],
 })

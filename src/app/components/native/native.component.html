@@ -1,18 +1,19 @@
-<ul class="native">
-  <li
-    [class.selected]="native === selectedNative"
-    *ngFor="let native of natives; trackBy: trackByFn"
-    (click)="onSelect(native)"
-  >
-    {{ native.name }}
-    <span class="native__arg">
-      (
-      <span *ngFor="let argument of native.arguments">
-        {{ argument.namearg }} -- [[ {{ argument.type }} ]]
+<div class="native-info">
+  <app-details app-details [native]="selectedNative"></app-details>
+  <ul class="native">
+    <li
+      [class.selected]="native === selectedNative"
+      *ngFor="let native of natives; trackBy: trackByFn"
+      (click)="onSelect(native)"
+    >
+      {{ native.name }}
+      <span class="native__arg">
+        (
+        <span *ngFor="let argument of native.arguments">
+          {{ argument.namearg }} -- [[ {{ argument.type }} ]]
+        </span>
+        )
       </span>
-      )
-    </span>
-  </li>
-</ul>
-
-<app-details [native]="selectedNative"></app-details>
+    </li>
+  </ul>
+</div>

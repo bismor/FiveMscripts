@@ -48,4 +48,4 @@
     <p>Adds an output for the specified audio submix.</p>
   </div>
 </div>
-<ng-template #elseBlock>Please select a native from the list.</ng-template>
+<div *ngIf="!native" class="detail">Please select a native from the list.</div>
