@@ -6,14 +6,14 @@
     </span>
     <span>
       <span class="apiset">API set: </span>
-      client
+      {{ native.apiset }}
     </span>
     <span class="game">
       <span>Game</span>
       gta5
     </span>
   </div>
-  <h2>AddAudioSubmixOutput</h2>
+  <h2>{{ native.name }}</h2>
   <div class="hash">
     <span>
       <pre>{{ native.hash }}</pre>
@@ -21,8 +21,8 @@
   </div>
   <div class="code">
     <pre>
-      -- ADD_AUDIO_SUBMIX_OUTPUT
-      AddAudioSubmixOutput(
+      -- {{ native.name }}
+      {{ native.name }}(
 	    submixId --[[ integer ]],
 	    outputSubmixId --[[ integer ]]
       )
