@@ -23,8 +23,11 @@
     <pre>
       -- {{ native.name }}
       {{ native.name }}(
-	    submixId --[[ integer ]],
-	    outputSubmixId --[[ integer ]]
+	    <ul>
+        <li *ngFor="let argument of native.arguments">
+          {{argument.namearg}} -- [[{{argument.type}}]]
+        </li>
+      </ul>
       )
     </pre>
   </div>
@@ -33,19 +36,18 @@
       <strong>Parameters:</strong>
       <br />
       <ul>
-        <li>
-          <strong>submixId</strong>
-          ": "
-          <p>The input submix.</p>
-        </li>
-        <li>
-          <strong>outputSubmixId</strong>
-          ": "
-          <p>The output submix. Use 0 for the master game submix.</p>
+        <li *ngFor="let argument of native.arguments">
+          <strong>
+            {{ argument.namearg }}
+            :
+            {{ argument.description }}
+          </strong>
         </li>
       </ul>
     </div>
-    <p>Adds an output for the specified audio submix.</p>
+    <p>{{ native.comment }}</p>
   </div>
 </div>
-<div *ngIf="!native" class="detail">Please select a native from the list.</div>
+<div *ngIf="!native" class="detail empty">
+  Please select a native from the list.
+</div>
