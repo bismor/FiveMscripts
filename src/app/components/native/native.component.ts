@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Native } from '../native';
-import { NATIVELISTLUA } from '../../native-list';
 import { DataService } from 'src/app/data.service';
 
 @Component({
